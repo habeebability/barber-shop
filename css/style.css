@@ -14,12 +14,12 @@ body {
     
 }
 .header {
-    height: 95vh;
-    background-color: #FE6B6B;
+    min-height: 130vh;
+    background-color: #f55959;
     color: white;
     position: relative;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 80, 0 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
 }
 nav {
     padding: 40px 100px;
@@ -55,8 +55,9 @@ nav ul li a{
     top: -150px;
     right: -120px;
     border-radius: 50%;
-    width: 700px;
-    height: 700px;
+    width: 650px;
+    height: 650px;
+    box-shadow: 0 0 10px 12px rgba(248, 55, 232, 0.5);
 }
 /* Loader */
 #loader {
@@ -80,4 +81,60 @@ nav ul li a{
 #loader.none {
 	visibility: hidden;
 	opacity: 0;
+}
+.desc-text {
+    color: #fff;
+    padding: 20px;
+    padding-top: 100px;
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+.marked-text {
+    background-color: rgba(248, 55, 232, .5);
+    padding: 20px 0 20px 10px;  
+}
+.description {
+    margin-left: 113px;
+}
+.header-text {
+    padding-top: 20px;
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 60px;
+}
+.header-text-one{
+    display: block;
+}
+.header-text-two {
+    display: block;
+}
+.para-group{
+    padding-top: 25px;
+    margin-bottom: 60px;
+    
+}
+.para1, .para2, .para3{
+    display: block;
+    font-weight: 400;
+    font-size: 22px;
+}
+.btn {
+    padding: 15px 50px;
+    border: 2px solid #fff;
+    color: #fff;
+
+}
+.btn-white{
+    background-color: #ffffff;
+    margin-right: 5px;
+    color: #000000;
+}
+.btn:hover {
+    background-color: #fff;
+    color: black;
+}
+.btn-white:hover {
+    background-color: #f55959;
+    color: #fff;
 }

@@ -22,35 +22,32 @@ body {
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
 }
 nav {
-    padding: 40px 100px;
-    padding-right: 70px;
-   
+    padding: 40px 0;   
 }
-nav ul {
+a {
+    color: currentColor;
+}
+nav > ul {
     display: flex;
     align-items: center;
     font-size: 20px;
     font-weight: 300;
-    
 }
-nav ul li{
+nav > ul li{
+    display: none;
     margin-right: 40px;
     z-index: 1;
 }
-nav ul li a{
-    color: white;
-
-}
-.brand-logo {
-    padding-right: 100px;
+#check {
+    display: none;
 }
 .logo {
     font-size: 35px;
     font-weight: 600;
-    padding-right: 100px;
-    padding-left: 40px;
+    margin-right: 150px;
 }
 .customer-pic {
+    display: none;
     position: absolute;
     top: -150px;
     right: -120px;
@@ -58,6 +55,7 @@ nav ul li a{
     width: 650px;
     height: 650px;
     box-shadow: 0 0 10px 12px rgba(248, 55, 232, 0.5);
+    z-index: -1;
 }
 /* Loader */
 #loader {
@@ -84,7 +82,6 @@ nav ul li a{
 }
 .desc-text {
     color: #fff;
-    padding: 20px;
     padding-top: 100px;
     font-family: 'lato', sans-serif;
     font-weight: 400;
@@ -99,7 +96,6 @@ nav ul li a{
 }
 .header-text {
     padding-top: 20px;
-    padding-left: 15px;
     font-weight: 700;
     font-size: 60px;
 }
@@ -137,4 +133,66 @@ nav ul li a{
 .btn-white:hover {
     background-color: #f55959;
     color: #fff;
+}
+.container {
+    padding: 0 50px;
+}
+.checkbtn {
+    z-index: 1000;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+}
+#check:checked ~ .side-bar {
+    right: 0;
+}
+.side-bar {
+    position: fixed;
+    right: -600px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #a04646;
+    color: white;
+    padding: 40px 50px;
+    text-align: center;
+    font-size: 24px;
+    transition: all .5s ease-in-out;
+}
+.side-bar li {
+    padding: 20px 0;
+}
+.side-bar li a {
+    display: block;
+    padding: 5px;
+}
+.side-bar li a:hover {
+    color: #FE6B6B;
+}
+@media (min-width: 600px) {
+    .container {
+        padding:  0 80px;
+    }
+}
+@media (min-width: 900px) {
+    .customer-pic {
+        display: initial;
+    }
+    .container {
+        padding: 0 100px;
+    }
+    .checkbtn {
+        display: none;
+    }
+    nav > ul li {
+        display: initial;
+    }
+    .side-bar{
+        display: none;
+    }
 }
